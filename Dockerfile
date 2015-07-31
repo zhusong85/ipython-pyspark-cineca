@@ -28,13 +28,12 @@ RUN pip install pandas
 
 #RUN mkdir /exercises && cd /exercises && git clone https://github.com/gfiameni/course-exercises
 
-RUN mkdir /notebooks
+RUN mkdir /config
+RUN mkdir /config/hadoop
+RUN mkdir /config/spark
 #RUN cp -r /exercises/course-exercises/spark/2015_April/* /notebooks
 
-VOLUME /notebooks
-WORKDIR /notebooks
+VOLUME /config
+WORKDIR /config
 
-
-EXPOSE 8888
-
-CMD /etc/bootstrap.sh && /usr/local/spark/sbin/start-master.sh && IPYTHON_OPTS="notebook --no-browser --ip=0.0.0.0 --port 8888" pyspark
+CMD /etc/bootstrap.sh
