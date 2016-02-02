@@ -30,7 +30,8 @@ RUN pip install pandas
 
 # Postgres
 RUN mkdir /usr/local/drivers/ 
-RUN curl -s https://jdbc.postgresql.org/download/postgresql-9.4.1207.jar /usr/local/drivers/
+RUN cd /usr/local/drivers/ 
+RUN wget https://jdbc.postgresql.org/download/postgresql-9.4.1207.jar
 
 RUN mkdir /config
 RUN mkdir /config/hadoop
