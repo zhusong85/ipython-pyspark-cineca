@@ -29,7 +29,7 @@ RUN pip install pandas
 #RUN mkdir /exercises && cd /exercises && git clone https://github.com/gfiameni/course-exercises
 
 # Postgres
-RUN mkdir /usr/local/drivers/
+RUN mkdir /usr/local/drivers/ 
 RUN curl -s https://jdbc.postgresql.org/download/postgresql-9.4.1207.jar /usr/local/drivers/
 
 RUN mkdir /config
